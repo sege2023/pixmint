@@ -21,6 +21,7 @@ const Navbar = () => {
             <div>
                 {/* <button onClick={connectWallet}>connect wallet</button> */}
                 <WalletMultiButton/>
+                <p>git test</p>
             </div>
         </>
     )
