@@ -10,7 +10,22 @@ pub mod smart_contract {
         msg!("Greetings from: {:?}", ctx.program_id);
         Ok(())
     }
+
+    pub fn mintnft(ctx: Context<MintNft) -> Result<()>{
+
+    }
 }
 
 #[derive(Accounts)]
 pub struct Initialize {}
+pub struct MintNft<'info> {
+    #[account(inti)]
+    #[account(mut)]
+    pub payer: Signer<'info>,
+    pub system_program: Program<'info, System>,
+}
+
+#[account]
+pub struct NftData{
+     
+}
